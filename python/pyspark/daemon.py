@@ -72,7 +72,7 @@ def worker(listen_sock):
                 handle_sigchld()
             elif err.errno != ECHILD:
                 raise
-    signal.signal(SIGCHLD, handle_sigchld)
+    #signal.signal(SIGCHLD, handle_sigchld)
 
     # Blocks until the socket is closed by draining the input stream
     # until it raises an exception or returns EOF.
